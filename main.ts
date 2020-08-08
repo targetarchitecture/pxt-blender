@@ -18,7 +18,7 @@ let center = 0
 let change = 0
 RotaryEncoder.init(Pins.P16, Pins.P15, Pins.P14)
 change = 20
-center = 1390
+center = 1450
 spinPercent = center
 basic.forever(function () {
     spinPercent = Math.constrain(spinPercent, 0.5 * center, 1.5 * center)
