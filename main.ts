@@ -21,7 +21,7 @@ change = 20
 center = 1390
 spinPercent = center
 basic.forever(function () {
-    spinPercent = Math.constrain(spinPercent, 0, 2 * center)
+    spinPercent = Math.constrain(spinPercent, 0.5 * center, 1.5 * center)
     servos.P0.setPulse(spinPercent)
     serial.writeValue("x", spinPercent)
     basic.pause(100)
