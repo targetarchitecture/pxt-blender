@@ -1,24 +1,28 @@
 RotaryEncoder.onRotateEvent(RotationDirection.Left, function () {
-    spinPercent += -100
+    spinPercent += -1 * change
 })
 RotaryEncoder.onPressEvent(function () {
-	
+    spinPercent = center
 })
 input.onButtonPressed(Button.A, function () {
-    spinPercent += -10
-    serial.writeValue("x", spinPercent)
+    spinPercent += -1 * change
 })
 input.onButtonPressed(Button.B, function () {
-    spinPercent += 10
-    serial.writeValue("x", spinPercent)
+    spinPercent += change
 })
 RotaryEncoder.onRotateEvent(RotationDirection.Right, function () {
-    spinPercent += 100
+    spinPercent += change
 })
 let spinPercent = 0
-RotaryEncoder.init(Pins.P14, Pins.P14, Pins.P13)
-spinPercent = 1490
+let center = 0
+let change = 0
+RotaryEncoder.init(Pins.P16, Pins.P15, Pins.P14)
+change = 20
+center = 1390
+spinPercent = center
 basic.forever(function () {
+    spinPercent = Math.constrain(spinPercent, 0, 2 * center)
     servos.P0.setPulse(spinPercent)
+    serial.writeValue("x", spinPercent)
     basic.pause(100)
 })
