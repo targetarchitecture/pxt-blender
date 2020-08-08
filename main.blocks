@@ -1,4 +1,1 @@
-<xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="pxt-on-start"></block>
-  <block type="device_forever"></block>
-</xml>
+<xml xmlns="https://developers.google.com/blockly/xml"><block type="pxt-on-start" id="^+gez,eJ2HVm~CoGDlF]" x="0" y="0"><statement name="HANDLER"><block type="rotary_ky_init" id="!2{G-EQn:,u81U,={33E"><field name="clk">Pins.P14</field><field name="dt">Pins.P14</field><field name="sw">Pins.P13</field><next><block type="servostoponneutral" id="g_7jH:bOD~1U9u)xHTG+"><field name="servo">servos.P0</field><value name="enabled"><shadow type="toggleOnOff" id="Y{rxMZ1;BA2Z%wd7BvuL"><field name="on">true</field></shadow></value></block></next></block></statement></block><block type="device_forever" id="+[F+[J=_1u#ZXbolm@NE" x="369" y="216"/><block type="rotary_ky_rotated_left_event" id="SWT.KL_X:6`80LFnc*LB" x="29" y="351"><field name="dir">RotationDirection.Left</field></block><block type="rotary_ky_rotated_left_event" id="ZoMYN[l.]Jopi0+3;2ij" x="345" y="388"><field name="dir">RotationDirection.Right</field></block></xml>
